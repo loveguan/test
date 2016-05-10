@@ -3,3 +3,4 @@
 
 def Foo():
     print 'hhh '
+    print 'zhou guan jie test'
