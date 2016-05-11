@@ -2,7 +2,7 @@
 #_*_ coding:utf-8 _*_
 
 '''
-Created on 2016Äê5ÔÂ11ÈÕ
+Created on 2016ï¿½ï¿½5ï¿½ï¿½11ï¿½ï¿½
 
 @author: admin
 '''
@@ -15,7 +15,7 @@ def login(username):
     else:
         return 'error'
 def detatil(user):
-    print '--------'
+    print '%s is ok !' %user
 
 if __name__ == '__main__':
     user = raw_input("please input you name:")
