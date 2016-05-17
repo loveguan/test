@@ -65,25 +65,37 @@ if __name__ == '__main__':
     
     menu = ['chakan','quqian','yue','fanhui','tuichu']
     atm = Atm()
-    cha = Charkan()
-    a = {'zhou':'test'}
 #     content = pickle.dump(a, open('D:/test.txt','w'))
     content = pickle.load(open('D:/test.txt','r'))
+#     a={'zhou':1000}
+#     pay = pickle.dump(a,open('D:/pay.txt','w'))
     print content
     name = atm.input_name(content)
     boo=atm.test_passwd(name,content)
     if not boo:
         print 'exit ,wrong passwd!'
     else:
-        atm.show_menu()
-        number=atm.input_choice()
-        choice = atm.show_dict(number)
-        print choice
-        if choice== 'chakan':
+        while True:
             
-            
-    
-
+            atm.show_menu()
+            number=atm.input_choice()
+            choice = atm.show_dict(number)
+            print choice
+            if choice == 'chakan':
+                pay = pickle.load(open('D:/pay.txt','r'))
+                print pay[name]
+                
+            if choice == 'quqian':
+                num = input('input your number :')
+                dic = pickle.load(open('D:/pay.txt','r'))
+                pay = int(dic[name])-num
+                dic[name] = pay
+                pickle.dump(dic,open('D:/pay.txt','w'))
+                print dic
+                
+                
+                
+        
     
     
     
