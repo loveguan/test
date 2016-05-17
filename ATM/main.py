@@ -65,6 +65,7 @@ if __name__ == '__main__':
     
     menu = ['chakan','quqian','yue','fanhui','tuichu']
     atm = Atm()
+    cha = Charkan()
     a = {'zhou':'test'}
 #     content = pickle.dump(a, open('D:/test.txt','w'))
     content = pickle.load(open('D:/test.txt','r'))
@@ -77,7 +78,10 @@ if __name__ == '__main__':
         atm.show_menu()
         number=atm.input_choice()
         choice = atm.show_dict(number)
-    
+        print choice
+        if choice== 'chakan':
+            
+            
     
 
     
