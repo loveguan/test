@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 #coding:utf-8
+
+#接口，抽象
 from abc import abstractmethod, ABCMeta
 from _pyio import __metaclass__
 
